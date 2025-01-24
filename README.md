@@ -1,31 +1,35 @@
 # Python-Programming- A small Ordering Sweets
 
-menu={
-    'Roshogolla':10,
-    'Pantua':7,
-    'Kalakand':10,
-    'Kheerkodom':10,
-    'Rasmalai':15
-    
+sweets_menu = {
+    'Roshogolla': 190,
+    'Gulab Jamun': 108,
+    'Kalakand': 100,
+    'Palakova': 120,
+    'Rasmalai': 115
 }
-print('Welcome to Lucky Sweet's 🥰')
-print("Roshogolla: Rs10\nPantua: Rs7\nKalakand: Rs10\nKheerkodom: Rs10\nRasmalai: Rs15\n")
-print("-------------------------------------------")
-order_total = 0
-item_1 = input("Enter the name of item you want to order:- ")
-if item_1 in menu:
-    order_total +=menu[item_1]
-    print(f"Your item {item_1} has been added to your order")
-else:
-    print("Order item {item_1} is not avaialable yet")
-another_order = input("Do you want to add another item? (Yes/No):")
-if another_order == "Yes":
-    item_2 =input("Enter the same of second item:=")
-    if item_2 in menu:
-        order_total +=menu[item_2]
-        print(f"Item {item_2} has been added to order")
-    else:
-        print(f"Order item {item_2} is not avaialable!")
 
-print(f"The total amount of items is {order_total}")   
-print("Thankyou\nVisit Again")
+print("Welcome To Lucky Sweet House_!🥰")
+print("\nRoshogolla: Rs.190\nGulab Jamun: Rs.108\nKalakand: Rs.100\nPalakova: Rs.120\nRasmalai: Rs.115\n")
+print("------------------------------------------->>")
+
+order_total = 0
+item_1 = input("Enter the name of the item you want to order: ")
+
+if item_1 in sweets_menu:
+    order_total += sweets_menu[item_1]
+    print(f"Your item '{item_1}' has been added to your order.")
+else:
+    print(f"Sorry, the item '{item_1}' is not available.")
+
+another_order = input("Do you want to add another item? (Yes/No): ").strip().capitalize()
+
+if another_order == "Yes":
+    item_2 = input("Enter the name of the second item: ")
+    if item_2 in sweets_menu:
+        order_total += sweets_menu[item_2]
+        print(f"Your item '{item_2}' has been added to your order.")
+    else:
+        print(f"Sorry, the item '{item_2}' is not available!")
+
+print(f"The total amount of your order is Rs = {order_total}")
+print("\nThank you! Visit again_🤗")
